@@ -19,3 +19,27 @@ O seu programa deverá cálcular corretamente os valores dos métodos da classe 
 
 ## Solução
 O código está pela metade, e você deverá dar continuidade obedecendo as regras descritas acima, para que no final, tenhamos um programa funcional. Procure pela palavra comentada "TODO" no código, em seguida, implemente conforme as regras acima.
+
+## Resolução:
+Alterei as classes Reserva.cs, Suite.cs e Program.cs.
+
+Suite >> inclusao do atributo codigo para identificar a suite cadastrada.
+
+Program >> Inclusão de menu interativo com cadastro de suites. No cadastro de Reserva, foi implementado o cadastro de pessoas e escolha de uma das suites cadastradas para realizar a reserva.
+
+Foi colocado um exception na validação do cadastro de pessoas, de acordo com o enunciado do desafio.
+
+
+Gostaria de compartilhar com vocês o uso do método Find em uma Lista, ainda não foi abordado no bootcamp.
+
+Utilizo o método Find para procurar uma Suite pelo atributo código, usando expressao lambda. Caso encontre, ele retorna o objeto Suite encontrato, caso não encontre o retorno é NULO.
+
+Exemplo: 
+
+Suite suiteSelecionada = suites.Find(x=> x.Codigo.Equals(codigo));   
+
+  if(suiteSelecionada == null)
+  {
+    Console.WriteLine("Código de suíte informado não encontrado... Comece novamente.");
+    return;
+  }
